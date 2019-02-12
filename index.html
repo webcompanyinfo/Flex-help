@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Demo</title>    
+    <title>Flex Help</title>    
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>   
     
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
@@ -18,41 +18,41 @@
 	
     <div class="flex-div">
         <div class="flex-diraction">
-            <label><input type="radio" name="align" value="flex" checked>Flex</label><br>
-            <label><input type="radio" name="align" value="row-reverse">Row Reverse</label><br>
-            <label><input type="radio" name="align" value="column">Column</label><br>
-            <label><input type="radio" name="align" value="column-reverse">Column Reverse</label><br>
+            <label><input type="radio" name="align" value="flex" checked><span class="check-box">Flex</span></label>
+            <label><input type="radio" name="align" value="row-reverse"><span class="check-box">Row Reverse</span></label>
+            <label><input type="radio" name="align" value="column"><span class="check-box">Column</span></label>
+            <label><input type="radio" name="align" value="column-reverse"><span class="check-box">Column Reverse</span></label>
         </div>
         
         <div class="flex-wrap">
-            <label><input type="radio" name="wrap" value="nowrap" checked>Nowrap</label><br>
-            <label><input type="radio" name="wrap" value="wrap">Wrap</label><br>
-            <label><input type="radio" name="wrap" value="wrap-reverse">Wrap Reverse</label><br>
+            <label><input type="radio" name="wrap" value="nowrap" checked><span class="check-box">Nowrap</span></label>
+            <label><input type="radio" name="wrap" value="wrap"><span class="check-box">Wrap</span></label>
+            <label><input type="radio" name="wrap" value="wrap-reverse"><span class="check-box">Wrap Reverse</span></label>
         </div>
          
         <div class="flex-justify-content">
-            <label><input type="radio" name="justify" value="flex-start" checked>flex-start</label><br>
-            <label><input type="radio" name="justify" value="flex-end">flex-end</label><br>
-            <label><input type="radio" name="justify" value="center">center</label><br>
-            <label><input type="radio" name="justify" value="space-around">space-around</label><br>
-            <label><input type="radio" name="justify" value="space-between">space-between</label><br>
+            <label><input type="radio" name="justify" value="flex-start" checked><span class="check-box">flex-start</span></label>
+            <label><input type="radio" name="justify" value="flex-end"><span class="check-box">flex-end</span></label>
+            <label><input type="radio" name="justify" value="center"><span class="check-box">center</span></label>
+            <label><input type="radio" name="justify" value="space-around"><span class="check-box">space-around</span></label>
+            <label><input type="radio" name="justify" value="space-between"><span class="check-box">space-between</span></label>
         </div>
          
         <div class="flex-align-item">
-            <label><input type="radio" name="align-item" value="stretch" checked>Stretch (default)</label><br>
-            <label><input type="radio" name="align-item" value="baseline">baseline</label><br>
-            <label><input type="radio" name="align-item" value="align-center">center</label><br>
-            <label><input type="radio" name="align-item" value="flex-start-item">flex-start</label><br>
-            <label><input type="radio" name="align-item" value="flex-end-item">flex-end</label><br>
+            <label><input type="radio" name="align-item" value="stretch" checked><span class="check-box">Stretch (default)</span></label>
+            <label><input type="radio" name="align-item" value="baseline"><span class="check-box">baseline</span></label>
+            <label><input type="radio" name="align-item" value="align-center"><span class="check-box">center</span></label>
+            <label><input type="radio" name="align-item" value="flex-start-item"><span class="check-box">flex-start</span></label>
+            <label><input type="radio" name="align-item" value="flex-end-item"><span class="check-box">flex-end</span></label>
         </div>
         
         <div class="flex-align-content">
-            <label><input type="radio" name="align-content" value="content-stretch" checked>Stretch (default)</label><br>
-            <label><input type="radio" name="align-content" value="content-align-center">center</label><br>
-            <label><input type="radio" name="align-content" value="content-flex-start">flex-start</label><br>
-            <label><input type="radio" name="align-content" value="content-flex-end">flex-end</label><br>
-            <label><input type="radio" name="align-content" value="content-space-around">space-around</label><br> 
-            <label><input type="radio" name="align-content" value="content-space-between">space-between</label><br>        
+            <label><input type="radio" name="align-content" value="content-stretch" checked><span class="check-box">Stretch (default)</span></label>
+            <label><input type="radio" name="align-content" value="content-align-center"><span class="check-box">center</span></label>
+            <label><input type="radio" name="align-content" value="content-flex-start"><span class="check-box">flex-start</span></label>
+            <label><input type="radio" name="align-content" value="content-flex-end"><span class="check-box">flex-end</span></label>
+            <label><input type="radio" name="align-content" value="content-space-around"><span class="check-box">space-around</span></label> 
+            <label><input type="radio" name="align-content" value="content-space-between"><span class="check-box">space-between</span></label>        
         </div>
     </div>
     
@@ -77,19 +77,62 @@
     </ul>
 
 
-</div>
 
+</div>
+<p style="height:52px;"></p>
 <footer class="footer">
-<p> Creative by : Dhaval Patel</p>
+<p> Creative by : <span>Dhaval Patel</span></p>
 </footer>
+
 <style>
+html,
 body{
 	padding:0;
 	margin:0;
 	font-family: 'Slabo 27px', serif;
+	background: rgba(0,0,0,0.02);
+	overflow-x: hidden;
+	position:relative;
+	min-height: 100vh;
 }
-
+.flex-div label {
+	position:relative;
+	padding: 2px 0 2px 20px;
+	display:block;
+	width: 100%;
+	cursor: pointer;
+}
+.flex-div input {
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+}
+.check-box {
+	position:relative;
+	display:block;
+		text-transform: capitalize;
+}
+.check-box:before {
+	content:'';
+	height: 16px;
+	width: 16px;
+	background-color: rgba(0,0,0,0.2);
+	position:absolute;
+	left: -20px;
+	top: 1px;
+	border-radius: 4px;
+}
+.flex-div input:checked ~ .check-box:before {
+	opacity: 1;
+	background-image: url(right-icon.svg);
+	background-size: 12px;
+	background-position: center center;
+	background-color: #063;
+	background-repeat: no-repeat;
+}
 .wrapper {
+	position: relative;
 	width: 100%;
 	max-width: 1000px;
 	margin: 20px auto 0;
@@ -112,7 +155,7 @@ body{
 	padding:0;
 	max-width: 80%;
 	margin: 20px auto;
-	height: 400px;
+	height: 380px;
 	background:#CCC;
 	
 	flex-direction: row;
@@ -120,7 +163,7 @@ body{
 	justify-content: center;
 	align-items: stretch;
 	align-content: stretch;
-
+	border: 1px solid rgba(0,0,0,0.1);
 }
 .tlt1 li {
 	padding: 0 80px !important;
@@ -140,38 +183,57 @@ body{
 	margin: 0 auto;
 }
 
-.tlt1 li:nth-child(1) {	background: red; }
-.tlt1 li:nth-child(2) {	background: yellow; }
-.tlt1 li:nth-child(3) {	background: pink; }
-.tlt1 li:nth-child(4) {	background: blue; }
-.tlt1 li:nth-child(5) {	background: green; }
-.tlt1 li:nth-child(6) {	background: red; }
-.tlt1 li:nth-child(7) {	background: yellow; }
-.tlt1 li:nth-child(8) {	background: pink; }
-.tlt1 li:nth-child(9) {	background: blue; }
-.tlt1 li:nth-child(10){	background: green; }
+.tlt1 li:nth-child(1) {	background: #034868; }
+.tlt1 li:nth-child(2) {	background: #356d86; }
+.tlt1 li:nth-child(3) {	background: #6891a4; }
+.tlt1 li:nth-child(4) {	background: #9ab6c3; }
+.tlt1 li:nth-child(5) {	background: #cddae1; }
+.tlt1 li:nth-child(6) {	background: #e5ecf0; }
+.tlt1 li:nth-child(7) {	background: #cddae1; }
+.tlt1 li:nth-child(8) {	background: #9ab6c3; }
+.tlt1 li:nth-child(9) {	background: #6891a4; }
+.tlt1 li:nth-child(10){	background: #356d86; }
 
 .show {
-	background: rgba(0,0,0,0.1);
-	color: rgba(0,0,0,0.6);
+	background: #1d1d1d;
+	color: rgba(0,0,0,0.8);
 	padding: 10px 20px;
 	font-family: 'Slabo 27px', serif;
 	font-size: 20px;
 	line-height: 2;
+	border: 2px solid #6d6d6d;
 }
 .show p {
 	padding: 0;
 	margin: 0;
 	line-height: 1.4;
+	color: #fff;
 }
 .footer {
-	background: #000;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right: 0;
+	width: 100%;
 	color: #fff;
 	text-align:center;
 	padding: 8px;
+background: rgba(61,61,61,1);
+background: -moz-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(61,61,61,1)), color-stop(100%, rgba(19,19,19,1)));
+background: -webkit-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: -o-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: -ms-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: linear-gradient(to right, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#131313', GradientType=1 );
 }
 .footer p {
 	font-size: 20px;
+	text-transform: uppercase;
+}
+ 
+.footer p span {
+	color: #f1b000;
 }
 
 
