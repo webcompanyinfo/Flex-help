@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>    
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>   
+    
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+   
+</head>
+<body>
+
+<div class="wrapper">
+
+	<h1>Flex Help Box</h1>	
+	
+    <div class="flex-div">
+        <div class="flex-diraction">
+            <label><input type="radio" name="align" value="flex" checked>Flex</label><br>
+            <label><input type="radio" name="align" value="row-reverse">Row Reverse</label><br>
+            <label><input type="radio" name="align" value="column">Column</label><br>
+            <label><input type="radio" name="align" value="column-reverse">Column Reverse</label><br>
+        </div>
+        
+        <div class="flex-wrap">
+            <label><input type="radio" name="wrap" value="nowrap" checked>Nowrap</label><br>
+            <label><input type="radio" name="wrap" value="wrap">Wrap</label><br>
+            <label><input type="radio" name="wrap" value="wrap-reverse">Wrap Reverse</label><br>
+        </div>
+         
+        <div class="flex-justify-content">
+            <label><input type="radio" name="justify" value="flex-start" checked>flex-start</label><br>
+            <label><input type="radio" name="justify" value="flex-end">flex-end</label><br>
+            <label><input type="radio" name="justify" value="center">center</label><br>
+            <label><input type="radio" name="justify" value="space-around">space-around</label><br>
+            <label><input type="radio" name="justify" value="space-between">space-between</label><br>
+        </div>
+         
+        <div class="flex-align-item">
+            <label><input type="radio" name="align-item" value="stretch" checked>Stretch (default)</label><br>
+            <label><input type="radio" name="align-item" value="baseline">baseline</label><br>
+            <label><input type="radio" name="align-item" value="align-center">center</label><br>
+            <label><input type="radio" name="align-item" value="flex-start-item">flex-start</label><br>
+            <label><input type="radio" name="align-item" value="flex-end-item">flex-end</label><br>
+        </div>
+        
+        <div class="flex-align-content">
+            <label><input type="radio" name="align-content" value="content-stretch" checked>Stretch (default)</label><br>
+            <label><input type="radio" name="align-content" value="content-align-center">center</label><br>
+            <label><input type="radio" name="align-content" value="content-flex-start">flex-start</label><br>
+            <label><input type="radio" name="align-content" value="content-flex-end">flex-end</label><br>
+            <label><input type="radio" name="align-content" value="content-space-around">space-around</label><br> 
+            <label><input type="radio" name="align-content" value="content-space-between">space-between</label><br>        
+        </div>
+    </div>
+    
+    <h2>CSS Output</h2>
+    <div class="show">
+        <p>flex-direction: row;</p>
+        <p>flex-wrap: nowrap;</p>
+        <p>justify-content: flex-start;</p>
+        <p>align-items: stretch;</p>
+        <p>align-content: stretch;</p>
+    </div>
+    
+    <ul class="tlt1">
+        <li><span>1</span></li>
+        <li><span>2</span></li>
+        <li><span>3</span></li>
+        <li><span>4</span></li>
+        <li><span>5</span></li>
+        <li><span>6</span></li>
+        <li><span>7</span></li>
+        <li><span>8</span></li>
+    </ul>
+
+
+</div>
+
+<footer class="footer">
+<p> Creative by : Dhaval Patel</p>
+</footer>
+<style>
+body{
+	padding:0;
+	margin:0;
+	font-family: 'Slabo 27px', serif;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1000px;
+	margin: 20px auto 0;
+}
+
+.flex-div div {
+	width: 18%;
+	display: inline-block;
+	vertical-align: top;
+}
+.tlt1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+	margin:0;
+	padding:0;
+	max-width: 80%;
+	margin: 20px auto;
+	height: 400px;
+	background:#CCC;
+	
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+
+}
+.tlt1 li {
+	padding: 0 80px !important;
+    background-color: orange;
+    list-style: none;
+    color: #000;
+    padding:10px;
+    text-align:center;
+    font-size: 30px;
+    line-height: 50px;  
+    box-sizing: border-box;
+}
+.tlt1 li span {
+	width: 20px;
+	text-align: center;
+	display:block;
+	margin: 0 auto;
+}
+
+.tlt1 li:nth-child(1) {	background: red; }
+.tlt1 li:nth-child(2) {	background: yellow; }
+.tlt1 li:nth-child(3) {	background: pink; }
+.tlt1 li:nth-child(4) {	background: blue; }
+.tlt1 li:nth-child(5) {	background: green; }
+.tlt1 li:nth-child(6) {	background: red; }
+.tlt1 li:nth-child(7) {	background: yellow; }
+.tlt1 li:nth-child(8) {	background: pink; }
+.tlt1 li:nth-child(9) {	background: blue; }
+.tlt1 li:nth-child(10){	background: green; }
+
+.show {
+	background: rgba(0,0,0,0.1);
+	color: rgba(0,0,0,0.6);
+	padding: 10px 20px;
+	font-family: 'Slabo 27px', serif;
+	font-size: 20px;
+	line-height: 2;
+}
+.show p {
+	padding: 0;
+	margin: 0;
+	line-height: 1.4;
+}
+.footer {
+	background: #000;
+	color: #fff;
+	text-align:center;
+	padding: 8px;
+}
+.footer p {
+	font-size: 20px;
+}
+
+
+</style>
+
+
+<script>
+var $tlt = $(".tlt1");
+
+$(".flex-diraction input[type=radio][name=align]").on('change', function() {
+	var radVal = $(this).val();
+	if (radVal == 'flex') {
+		$(".tlt1").css({ 'flex-direction': 'row' });
+		$(".show p:nth-child(1)").html("flex-direction: row;");
+  	}
+	else if (radVal == 'row-reverse') {
+	    $(".tlt1").css({ 'flex-direction': 'row-reverse' });
+		$(".show p:nth-child(1)").html("flex-direction: row-reverse;");
+    }
+	else if (radVal == 'column') {
+	    $(".tlt1").css({ 'flex-direction': 'column' });
+		$(".show p:nth-child(1)").html("flex-direction: column;");
+    }
+	else if (radVal == 'column-reverse') {
+	    $(".tlt1").css({ 'flex-direction': 'column-reverse' });
+		$(".show p:nth-child(1)").html("flex-direction: column-reverse;");
+    }
+});
+
+
+$(".flex-wrap input[type=radio][name=wrap]").on('change', function() {
+	var radVal = $(this).val();
+	if (radVal == 'nowrap') {
+		$(".tlt1").css({ 'flex-wrap': 'nowrap' });
+		$(".show p:nth-child(2)").html("flex-wrap: nowrap;");
+  	}
+	else if (radVal == 'wrap') {
+	    $(".tlt1").css({ 'flex-wrap': 'wrap' });
+		$(".show p:nth-child(2)").html("flex-wrap: wrap;");
+    }
+	else if (radVal == 'wrap-reverse') {
+	    $(".tlt1").css({ 'flex-wrap': 'wrap-reverse' });
+		$(".show p:nth-child(2)").html("flex-wrap: wrap-reverse;");
+    }
+});
+
+$(".flex-justify-content input[type=radio][name=justify]").on('change', function() {
+	var radVal = $(this).val();
+	if (radVal == 'flex-start') {
+		$(".tlt1").css({ 'justify-content': 'flex-start' });
+		$(".show p:nth-child(3)").html("justify-content: flex-start;");
+  	}
+	else if (radVal == 'flex-end') {
+	    $(".tlt1").css({ 'justify-content': 'flex-end' });
+		$(".show p:nth-child(3)").html("justify-content: flex-end;");
+    }
+	else if (radVal == 'center') {
+	    $(".tlt1").css({ 'justify-content': 'center' });
+		$(".show p:nth-child(3)").html("justify-content: center;");
+    }
+	else if (radVal == 'space-around') {
+	    $(".tlt1").css({ 'justify-content': 'space-around' });
+		$(".show p:nth-child(3)").html("justify-content: space-around;");
+    }
+	else if (radVal == 'space-between') {
+	    $(".tlt1").css({ 'justify-content': 'space-between' });
+		$(".show p:nth-child(3)").html("justify-content: space-between;");
+    }
+});
+
+$(".flex-align-item input[type=radio][name=align-item]").on('change', function() {
+	var radVal = $(this).val();
+	if (radVal == 'stretch') {
+		$(".tlt1").css({ 'align-items': 'stretch' });
+		$(".show p:nth-child(4)").html("align-items: stretch;");
+  	}
+	else if (radVal == 'baseline') {
+	    $(".tlt1").css({ 'align-items': 'baseline' });
+		$(".show p:nth-child(4)").html("align-items: baseline;");
+    }
+	else if (radVal == 'align-center') {
+	    $(".tlt1").css({ 'align-items': 'center' });
+		$(".show p:nth-child(4)").html("align-items: center;");
+    }
+	else if (radVal == 'flex-start-item') {
+	    $(".tlt1").css({ 'align-items': 'flex-start' });
+		$(".show p:nth-child(4)").html("align-items: flex-start;");
+    }
+	else if (radVal == 'flex-end-item') {
+	    $(".tlt1").css({ 'align-items': 'flex-end' });
+		$(".show p:nth-child(4)").html("align-items: flex-end;");
+    }
+});
+
+$(".flex-align-content input[type=radio][name=align-content]").on('change', function() {
+	var radVal = $(this).val();
+	if (radVal == 'content-stretch') {
+		$(".tlt1").css({ 'align-content': 'stretch' });
+		$(".show p:nth-child(5)").html("align-content: stretch;");
+  	}
+	else if (radVal == 'content-align-center') {
+	    $(".tlt1").css({ 'align-content': 'center' });
+		$(".show p:nth-child(5)").html("align-content: center;");
+    }
+	else if (radVal == 'content-flex-start') {
+	    $(".tlt1").css({ 'align-content': 'flex-start' });
+		$(".show p:nth-child(5)").html("align-content: flex-start;");
+    }
+	else if (radVal == 'content-flex-end') {
+	    $(".tlt1").css({ 'align-content': 'flex-end' });
+		$(".show p:nth-child(5)").html("align-content: flex-end;");
+    }
+	else if (radVal == 'content-space-around') {
+	    $(".tlt1").css({ 'align-content': 'space-around' });
+		$(".show p:nth-child(5)").html("align-content: space-around;");
+    }
+	else if (radVal == 'content-space-between') {
+	    $(".tlt1").css({ 'align-content': 'space-between' });
+		$(".show p:nth-child(5)").html("align-content: space-between;");
+    }
+});
+</script>
+
+
+
+
+
+
+
+</body> 
+</html>
