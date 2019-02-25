@@ -56,8 +56,9 @@
         </div>
     </div>
     
-    <h2>CSS Output</h2>
+    <h2 class="sub-title">CSS Output</h2>
     <div class="show">
+    	<p>display: flex;</p>
         <p>flex-direction: row;</p>
         <p>flex-wrap: nowrap;</p>
         <p>justify-content: flex-start;</p>
@@ -108,6 +109,7 @@ body{
 	left:0;
 	opacity:0;
 }
+h1,h2{ padding-top: 0; margin-top: 5px; margin-bottom: 5px; }
 .check-box {
 	position:relative;
 	display:block;
@@ -135,7 +137,7 @@ body{
 	position: relative;
 	width: 100%;
 	max-width: 1000px;
-	margin: 20px auto 0;
+	margin: 10px auto 0;
 }
 
 .flex-div div {
@@ -155,7 +157,7 @@ body{
 	padding:0;
 	max-width: 80%;
 	margin: 20px auto;
-	height: 380px;
+	height: 300px;
 	background:#CCC;
 	
 	flex-direction: row;
@@ -247,19 +249,19 @@ $(".flex-diraction input[type=radio][name=align]").on('change', function() {
 	var radVal = $(this).val();
 	if (radVal == 'flex') {
 		$(".tlt1").css({ 'flex-direction': 'row' });
-		$(".show p:nth-child(1)").html("flex-direction: row;");
+		$(".show p:nth-child(2)").html("flex-direction: row;");
   	}
 	else if (radVal == 'row-reverse') {
 	    $(".tlt1").css({ 'flex-direction': 'row-reverse' });
-		$(".show p:nth-child(1)").html("flex-direction: row-reverse;");
+		$(".show p:nth-child(2)").html("flex-direction: row-reverse;");
     }
 	else if (radVal == 'column') {
 	    $(".tlt1").css({ 'flex-direction': 'column' });
-		$(".show p:nth-child(1)").html("flex-direction: column;");
+		$(".show p:nth-child(2)").html("flex-direction: column;");
     }
 	else if (radVal == 'column-reverse') {
 	    $(".tlt1").css({ 'flex-direction': 'column-reverse' });
-		$(".show p:nth-child(1)").html("flex-direction: column-reverse;");
+		$(".show p:nth-child(2)").html("flex-direction: column-reverse;");
     }
 });
 
@@ -268,15 +270,15 @@ $(".flex-wrap input[type=radio][name=wrap]").on('change', function() {
 	var radVal = $(this).val();
 	if (radVal == 'nowrap') {
 		$(".tlt1").css({ 'flex-wrap': 'nowrap' });
-		$(".show p:nth-child(2)").html("flex-wrap: nowrap;");
+		$(".show p:nth-child(3)").html("flex-wrap: nowrap;");
   	}
 	else if (radVal == 'wrap') {
 	    $(".tlt1").css({ 'flex-wrap': 'wrap' });
-		$(".show p:nth-child(2)").html("flex-wrap: wrap;");
+		$(".show p:nth-child(3)").html("flex-wrap: wrap;");
     }
 	else if (radVal == 'wrap-reverse') {
 	    $(".tlt1").css({ 'flex-wrap': 'wrap-reverse' });
-		$(".show p:nth-child(2)").html("flex-wrap: wrap-reverse;");
+		$(".show p:nth-child(3)").html("flex-wrap: wrap-reverse;");
     }
 });
 
@@ -284,23 +286,23 @@ $(".flex-justify-content input[type=radio][name=justify]").on('change', function
 	var radVal = $(this).val();
 	if (radVal == 'flex-start') {
 		$(".tlt1").css({ 'justify-content': 'flex-start' });
-		$(".show p:nth-child(3)").html("justify-content: flex-start;");
+		$(".show p:nth-child(4)").html("justify-content: flex-start;");
   	}
 	else if (radVal == 'flex-end') {
 	    $(".tlt1").css({ 'justify-content': 'flex-end' });
-		$(".show p:nth-child(3)").html("justify-content: flex-end;");
+		$(".show p:nth-child(4)").html("justify-content: flex-end;");
     }
 	else if (radVal == 'center') {
 	    $(".tlt1").css({ 'justify-content': 'center' });
-		$(".show p:nth-child(3)").html("justify-content: center;");
+		$(".show p:nth-child(4)").html("justify-content: center;");
     }
 	else if (radVal == 'space-around') {
 	    $(".tlt1").css({ 'justify-content': 'space-around' });
-		$(".show p:nth-child(3)").html("justify-content: space-around;");
+		$(".show p:nth-child(4)").html("justify-content: space-around;");
     }
 	else if (radVal == 'space-between') {
 	    $(".tlt1").css({ 'justify-content': 'space-between' });
-		$(".show p:nth-child(3)").html("justify-content: space-between;");
+		$(".show p:nth-child(4)").html("justify-content: space-between;");
     }
 });
 
@@ -312,19 +314,19 @@ $(".flex-align-item input[type=radio][name=align-item]").on('change', function()
   	}
 	else if (radVal == 'baseline') {
 	    $(".tlt1").css({ 'align-items': 'baseline' });
-		$(".show p:nth-child(4)").html("align-items: baseline;");
+		$(".show p:nth-child(5)").html("align-items: baseline;");
     }
 	else if (radVal == 'align-center') {
 	    $(".tlt1").css({ 'align-items': 'center' });
-		$(".show p:nth-child(4)").html("align-items: center;");
+		$(".show p:nth-child(5)").html("align-items: center;");
     }
 	else if (radVal == 'flex-start-item') {
 	    $(".tlt1").css({ 'align-items': 'flex-start' });
-		$(".show p:nth-child(4)").html("align-items: flex-start;");
+		$(".show p:nth-child(5)").html("align-items: flex-start;");
     }
 	else if (radVal == 'flex-end-item') {
 	    $(".tlt1").css({ 'align-items': 'flex-end' });
-		$(".show p:nth-child(4)").html("align-items: flex-end;");
+		$(".show p:nth-child(5)").html("align-items: flex-end;");
     }
 });
 
@@ -332,27 +334,27 @@ $(".flex-align-content input[type=radio][name=align-content]").on('change', func
 	var radVal = $(this).val();
 	if (radVal == 'content-stretch') {
 		$(".tlt1").css({ 'align-content': 'stretch' });
-		$(".show p:nth-child(5)").html("align-content: stretch;");
+		$(".show p:nth-child(6)").html("align-content: stretch;");
   	}
 	else if (radVal == 'content-align-center') {
 	    $(".tlt1").css({ 'align-content': 'center' });
-		$(".show p:nth-child(5)").html("align-content: center;");
+		$(".show p:nth-child(6)").html("align-content: center;");
     }
 	else if (radVal == 'content-flex-start') {
 	    $(".tlt1").css({ 'align-content': 'flex-start' });
-		$(".show p:nth-child(5)").html("align-content: flex-start;");
+		$(".show p:nth-child(6)").html("align-content: flex-start;");
     }
 	else if (radVal == 'content-flex-end') {
 	    $(".tlt1").css({ 'align-content': 'flex-end' });
-		$(".show p:nth-child(5)").html("align-content: flex-end;");
+		$(".show p:nth-child(6)").html("align-content: flex-end;");
     }
 	else if (radVal == 'content-space-around') {
 	    $(".tlt1").css({ 'align-content': 'space-around' });
-		$(".show p:nth-child(5)").html("align-content: space-around;");
+		$(".show p:nth-child(6)").html("align-content: space-around;");
     }
 	else if (radVal == 'content-space-between') {
 	    $(".tlt1").css({ 'align-content': 'space-between' });
-		$(".show p:nth-child(5)").html("align-content: space-between;");
+		$(".show p:nth-child(6)").html("align-content: space-between;");
     }
 });
 </script>
