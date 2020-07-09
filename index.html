@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="Flex, flexbox, Display Flex, Flex Help,row-reverse,column-reverse, Wrap, flex-start, css,demo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Help</title>    
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>   
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+<div class="wrapper">
+
+	<h1>Flex Help Box</h1>	
+	
+    <div class="flex-div">
+        <div class="flex-diraction">
+        	<h2>FLEX-DIRECTION</h2>
+            <label><input type="radio" name="align" value="row" checked><span class="check-box">Flex</span></label>
+            <label><input type="radio" name="align" value="row-reverse"><span class="check-box">Row Reverse</span></label>
+            <label><input type="radio" name="align" value="column"><span class="check-box">Column</span></label>
+            <label><input type="radio" name="align" value="column-reverse"><span class="check-box">Column Reverse</span></label>
+        </div>
+        
+        <div class="flex-wrap">
+        	<h2>FLEX-WRAP</h2>
+            <label><input type="radio" name="wrap" value="nowrap" checked><span class="check-box">Nowrap</span></label>
+            <label><input type="radio" name="wrap" value="wrap"><span class="check-box">Wrap</span></label>
+            <label><input type="radio" name="wrap" value="wrap-reverse"><span class="check-box">Wrap Reverse</span></label>
+        </div>
+         
+        <div class="flex-justify-content">
+        	<h2>JUSTIFY-CONTENT</h2>
+            <label><input type="radio" name="justify" value="flex-start" checked><span class="check-box">flex-start</span></label>
+            <label><input type="radio" name="justify" value="flex-end"><span class="check-box">flex-end</span></label>
+            <label><input type="radio" name="justify" value="center"><span class="check-box">center</span></label>
+            <label><input type="radio" name="justify" value="space-around"><span class="check-box">space-around</span></label>
+            <label><input type="radio" name="justify" value="space-between"><span class="check-box">space-between</span></label>
+        </div>
+         
+        <div class="flex-align-item">
+        	<h2>ALIGN-ITEMS</h2>
+            <label><input type="radio" name="align-item" value="stretch" checked><span class="check-box">Stretch (default)</span></label>
+            <label><input type="radio" name="align-item" value="baseline"><span class="check-box">baseline</span></label>
+            <label><input type="radio" name="align-item" value="align-center"><span class="check-box">center</span></label>
+            <label><input type="radio" name="align-item" value="flex-start-item"><span class="check-box">flex-start</span></label>
+            <label><input type="radio" name="align-item" value="flex-end-item"><span class="check-box">flex-end</span></label>
+        </div>
+        
+        <div class="flex-align-content">
+        	<h2>ALIGN-CONTENT</h2>
+            <label><input type="radio" name="align-content" value="content-stretch" checked><span class="check-box">Stretch (default)</span></label>
+            <label><input type="radio" name="align-content" value="content-align-center"><span class="check-box">center</span></label>
+            <label><input type="radio" name="align-content" value="content-flex-start"><span class="check-box">flex-start</span></label>
+            <label><input type="radio" name="align-content" value="content-flex-end"><span class="check-box">flex-end</span></label>
+            <label><input type="radio" name="align-content" value="content-space-around"><span class="check-box">space-around</span></label> 
+            <label><input type="radio" name="align-content" value="content-space-between"><span class="check-box">space-between</span></label>        
+        </div>
+    </div>
+    
+    <h2 class="sub-title">CSS Output</h2>
+    <div class="show">
+    	<ul>
+    		<li>display: flex;</li>	
+	        <li>flex-direction: <span class="flex-direction">row<span>;</li>
+	        <li>flex-wrap: <span class="flex-wrap">nowrap<span>;</li>
+	        <li>justify-content: <span class="justify-content">flex-start<span>;</li>
+	        <li>align-items: <span class="align-items">stretch<span>;</li>
+	        <li>align-content: <span class="align-content">stretch<span>;</li>
+    	</ul>
+    </div>
+    
+    <ul class="tlt1">
+        <li><span>1</span></li>
+        <li><span>2</span></li>
+        <li><span>3</span></li>
+        <li><span>4</span></li>
+        <li><span>5</span></li>
+        <li><span>6</span></li>
+        <li><span>7</span></li>
+        <li><span>8</span></li>
+    </ul>
+
+
+
+</div>
+<p style="height:52px;"></p>
+<footer class="footer">
+<p> Creative by : <span>Dhaval Patel</span></p>
+</footer>
+
+<style>
+html,
+body{
+	padding:0;
+	margin:0;
+	font-family: 'Noto Sans JP', sans-serif;
+	background: rgba(0,0,0,0.02);
+	overflow-x: hidden;
+	position:relative;
+	min-height: 100vh;
+}
+.flex-div label {
+	position:relative;
+	padding: 2px 0 2px 20px;
+	display:block;
+	width: 100%;
+	cursor: pointer;
+}
+.flex-div input {
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+}
+h1,h2{ padding-top: 0; margin-top: 5px; margin-bottom: 5px; }
+.flex-div h2 { font-size: 16px; }
+.check-box {
+	position:relative;
+	display:block;
+		text-transform: capitalize;
+}
+.check-box:before {
+	content:'';
+	height: 16px;
+	width: 16px;
+	background-color: rgba(0,0,0,0.2);
+	position:absolute;
+	left: -20px;
+	top: 4px;
+	border-radius: 4px;
+}
+.flex-div input:checked ~ .check-box:before {
+	opacity: 1;
+	background-image: url(right-icon.svg);
+	background-size: 12px;
+	background-position: center center;
+	background-color: #063;
+	background-repeat: no-repeat;
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 10px auto 60px;
+}
+
+.flex-div div {
+	width: 18%;
+	display: inline-block;
+	vertical-align: top;
+}
+.tlt1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+	margin:0;
+	padding:0;
+	max-width: 80%;
+	margin: 20px auto;
+	height: 300px;
+	background:#CCC;
+	
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+.tlt1 li {
+	padding: 0 80px !important;
+    background-color: orange;
+    list-style: none;
+    color: #000;
+    padding:10px;
+    text-align:center;
+    font-size: 30px;
+    line-height: 50px;  
+    box-sizing: border-box;
+}
+.tlt1 li span {
+	width: 20px;
+	text-align: center;
+	display:block;
+	margin: 0 auto;
+}
+
+.tlt1 li:nth-child(1) {	background: #034868; }
+.tlt1 li:nth-child(2) {	background: #356d86; }
+.tlt1 li:nth-child(3) {	background: #6891a4; }
+.tlt1 li:nth-child(4) {	background: #9ab6c3; }
+.tlt1 li:nth-child(5) {	background: #cddae1; }
+.tlt1 li:nth-child(6) {	background: #e5ecf0; }
+.tlt1 li:nth-child(7) {	background: #9ab6c3; }
+.tlt1 li:nth-child(8) {	background: #6891a4; }
+.tlt1 li:nth-child(9) {	background: #356d86; }
+.tlt1 li:nth-child(10){	background: #034868; }
+
+.show {
+	background: #1d1d1d;
+	color: rgba(0,0,0,0.8);
+	padding: 15px 20px;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 20px;
+	line-height: 2;
+	border: 2px solid #6d6d6d;
+}
+.show ul { padding: 0; margin: 0; }
+.show li {
+	font-size: 18px;
+	font-weight: 300;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1.4;
+	color: #fff;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right: 0;
+	width: 100%;
+	color: #fff;
+	text-align:center;
+	padding: 8px;
+background: rgba(61,61,61,1);
+background: -moz-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(61,61,61,1)), color-stop(100%, rgba(19,19,19,1)));
+background: -webkit-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: -o-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: -ms-linear-gradient(left, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+background: linear-gradient(to right, rgba(61,61,61,1) 0%, rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#131313', GradientType=1 );
+}
+.footer p {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+ 
+.footer p span {
+	color: #f1b000;
+}
+.tlt1 {
+	flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: stretch;
+align-content: stretch;
+}
+@media(max-width: 767px){
+	.flex-div { display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex; flex-wrap: wrap; }
+	.flex-div .flex-diraction,
+	.flex-div .flex-wrap,
+	.flex-div .flex-justify-content,
+	.flex-div .flex-align-item,
+	.flex-div .flex-align-content {
+		width: 32%;
+		margin-bottom: 20px;
+	}
+}
+
+@media(max-width: 640px){
+	.flex-div .flex-diraction,
+	.flex-div .flex-wrap,
+	.flex-div .flex-justify-content,
+	.flex-div .flex-align-item,
+	.flex-div .flex-align-content {
+		width: 50%;
+	}
+}
+
+
+</style>
+
+
+<script>
+var $=jQuery.noConflict();
+$(document).ready(function(){
+	$('.flex-diraction input').change(function(){
+        if ($(this).is(':checked')) {
+         $('.flex-direction').text($(this).val());
+         var inputvalue = $(this).val();
+         $(".tlt1").css({ 'flex-direction': inputvalue });
+        }
+    });
+    $('.flex-wrap input').change(function(){
+        if ($(this).is(':checked')) {
+         $('.show .flex-wrap').text($(this).val());   
+         var inputvalue2 = $(this).val();
+         $(".tlt1").css({ 'flex-wrap': inputvalue2 });
+        }
+    });
+    $('.flex-justify-content input').change(function(){
+        if ($(this).is(':checked')) {
+         $('.show .justify-content').text($(this).val());   
+         var inputvalue3 = $(this).val();
+         $(".tlt1").css({ 'justify-content': inputvalue3 });
+        }
+    });
+    $('.flex-align-item input').change(function(){
+        if ($(this).is(':checked')) {
+         $('.show .align-items').text($(this).val());   
+         var inputvalue4 = $(this).val();
+         $(".tlt1").css({ 'align-items': inputvalue4 });   
+        }
+    });
+    $('.flex-align-content input').change(function(){
+        if ($(this).is(':checked')) {
+         $('.show .align-content').text($(this).val());   
+         var inputvalue5 = $(this).val();
+         $(".tlt1").css({ 'align-content': inputvalue5 });
+        }
+    });
+})
+</script>
+
+
+
+
+
+
+
+</body> 
+</html>
